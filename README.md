@@ -32,12 +32,20 @@ ssh root@server_ip
 بعد این ازتون پسورد رو میخواد که پسوردیکه از ارائه دهنده گرفتین رو بزنین
 
 سرور اینجا براتون بالا میاد به ترتیب دستورای زیر رو بزنین
-
+```
 apt update
+```
 اندکی صبر
+
+```
 apt upgrade -y
+```
+
 اندکی صبر مجدد
+
+```
 apt install docker docker-compose htop git -y
+```
 
 ##  این مرحله کاملا اختیاریه واگه زیاد با لینوکس اشنایی ندارین ردش کنین تا ادامه
 بعد تکمیل پروسه بالا همچیز امادست ولی برای امنیت بیشتر کار یه یوزر جدید میسازیم و بهش دسترسی sudo میدیم 
@@ -63,19 +71,33 @@ sudo -s که دسترسی همون یوزر روت اول رو داشته باش
 حالا باید این ریپازیتوری رو روی سرور اصطلاحا clone کنین
 دستور زیرو تو سرور بزنین
 
+```
 git clone https://github.com/salar403/vpn.git
+```
 
 بعد تکمیلش یه پوشه به نام vpn روی سرور دارین
 با دستور  cd vpn واردش بشین
 الان فقط کافیه دستور زیرو بزنین
-docker-compose up -d
 
-بعد docker ps بزنین
-باید  حدودا همچین چیزی ببینین
+```
+docker-compose up -d
+```
+بعد 
+```
+docker ps
+```
+بزنین. باید  حدودا همچین چیزی ببینین
+
+
 CONTAINER ID   IMAGE                                                      COMMAND                  CREATED          STATUS          PORTS                                           NAMES
 0ead0473351b   v2ray_v2ray                                              "/usr/bin/v2ray -con…"   26 minutes ago   Up 10 seconds   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp       v2ray
 
-یبارم محض اطمینان docker logs v2ray -f بزنین
+یبارم محض اطمینان 
+
+```
+docker logs v2ray -f
+```
+بزنین
 این دستور باید لاگ های وی پی ان رو بهتون نشون بده تو این مرحله وی پی ان بالاست باید برید سمت ست کردن دامین
 
 اول از همه باید یه دامین بگیرین که کاملا اختیاریه چجور دامینی باشه.ir .com .net .org .ml ...
@@ -130,9 +152,14 @@ https://play.google.com/store/apps/details?id=com.v2ray.ang
 
 بازش کنین 
 
+```
 vmess://eyJhZGQiOiJzdWJkb21haW4uZG9tYWluLmNvbSIsImFpZCI6IjAiLCJob3N0IjoiIiwiaWQiOiJkMTQ5NmNlYS1lYTVhLTRiMWEtYTU1NS02MjkzMzUyMjQ5NzgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvcHJpY2UiLCJwb3J0IjoiODA4MCIsInBzIjoiaXJhblx1MDAyN3MgZnJlZWRvbSIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-اینو کپی کنین بعد داخل اپ بالا راست ر.ی مثبت  بزنین گزینه دوم از بالا رو انتخاب کنین
+```
+
+اینو کپی کنین بعد داخل اپ بالا راست روی مثبت  بزنین گزینه دوم از بالا رو انتخاب کنین
+
 import config from clipboard
+
 یه کانفیگ براتون ایجاد میشه دکمه ادیتشو بزنین علامت یه خودکاره
 subdomain رو با اون اسمی که تو پنل اروان سر ست کردن dns گذاشتین عوض کنین
 domain.com  هم با ادرس دامینتون عوض کنین فرضا freenet.ir
