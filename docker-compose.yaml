@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  v2ray:
+    container_name: v2ray
+    restart: unless-stopped
+    build:
+      context: '.'
+      dockerfile: "./Dockerfile"
+    ports:
+      - 3000:3000
+    volumes:
+      - ./config.json:/config.json
