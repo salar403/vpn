@@ -1,13 +1,15 @@
-version: '3.3'
+version: "3.3"
 
 services:
   v2ray:
     container_name: v2ray
-    restart: unless-stopped
-    build:
-      context: '.'
-      dockerfile: "./Dockerfile"
+    restart: always
+    image: teddysun/xray
     ports:
-      - 3000:3000
+      - 80:80
     volumes:
-      - ./config.json:/config.json
+      - ./config.json:/etc/xray/config.json:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 1m
