@@ -11,12 +11,14 @@
           {
             "id": "d1496cea-ea5a-4b1a-a555-629335224978",
             "level": 1,
-            "alterId": 0
+            "alterId": 0,
+            "email": "username1"
           },
           {
             "id": "265553fe-8398-4722-917e-2f9ef3ff7970",
             "level": 1,
-            "alterId": 1
+            "alterId": 0,
+            "email": "username2"
           }
         ]
       },
