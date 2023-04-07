@@ -7,9 +7,11 @@ services:
     image: teddysun/xray
     ports:
       - 80:80
+    environment: 
+       - xray.vmess.aead.forced=true
     volumes:
       - ./config.json:/etc/xray/config.json:ro
     logging:
       driver: "json-file"
       options:
-        max-size: 1m
+        max-size: 5m
