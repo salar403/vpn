@@ -9,6 +9,8 @@ services:
       - xray.vmess.aead.forced=true
     volumes:
       - ./config.json:/etc/xray/config.json:ro
+    networks:
+      - v2ray-network
     logging:
       driver: "json-file"
       options:
